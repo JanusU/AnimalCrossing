@@ -1,0 +1,10 @@
+﻿@*Strongly typed view*@
+@using AnimalCrossing.Models.ViewModels;
+
+@model AnimalCatVM;
+
+@using (Html.BeginForm()) {
+    @await Html.PartialAsync("_CatDateForm", Model)
+
+    @Html.HiddenFor(x => x.CatDate.CatDateId)
+}

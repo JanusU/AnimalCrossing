@@ -1,0 +1,30 @@
+﻿
+@model CatDate
+
+<h1>Your date registeration is successful.</h1>
+
+<h2>Thanks host cat, @Model.HostCat.Name</h2>
+
+<h2>Thanks guest cat, @Model.GuestCat.Name</h2>
+
+<h2>Location: @ViewBag.Location</h2>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-xl-2">
+            <div class="card-body">
+                <h5 class="card-title">Host Cat: @Model.HostCat.Name</h5>
+                <img src="@Url.Content(Model.HostCat.ProfilePicture)" class="card-img-top" alt="profile picture" style='width:400px;height:300px;border:5px' />
+                <h5 class="card-text">Guest Cat: @Model.GuestCat.Name</h5>
+                <img src="@Url.Content(Model.GuestCat.ProfilePicture)" class="card-img-top" alt="profile picture" style='width:400px;height:300px;border:5px' />
+                <p class="card-text">Date Time: @Model.DateTime</p>
+                <p class="card-text">Location: @Model.Location</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary" style='background-color: green; width:100px; margin-left:50px'>Index</a>
+</div>

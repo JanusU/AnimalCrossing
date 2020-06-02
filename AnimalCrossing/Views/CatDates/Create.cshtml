@@ -9,11 +9,6 @@
 }
 
 
-Thanks, for registering @Model.Cat.Name
-
-Thanks, @ViewBag.Thanks
-
-Thanks again @ViewBag.Cat.Name who likes @ViewBag.Cat.Description
-
-
-<img src="@Url.Content(ViewBag.Cat.ProfilePicture)" alt="profile picture" />
+@using (Html.BeginForm()) {
+    @await Html.PartialAsync("_CatDateForm")
+}
