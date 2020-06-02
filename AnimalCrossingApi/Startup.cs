@@ -13,7 +13,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using AnimalCrossingApi.Models;
 using AutoMapper;
-using AnimalCrossing.Models.ViewModels;
 
 namespace AnimalCrossingApi
 {
@@ -55,6 +54,7 @@ namespace AnimalCrossingApi
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapRazorPages();
                 endpoints.MapControllers();
             });
         }

@@ -29,10 +29,6 @@ namespace AnimalCrossing.Models
                     };
 
                     context.Species.AddRange(species);
-                    //foreach(var spec in species)
-                    //{
-                    //    context.Species.Add(spec);
-                    //}
 
                     context.SaveChanges();
                 }
